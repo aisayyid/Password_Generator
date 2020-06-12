@@ -74,12 +74,11 @@ function generatePassword() {
     }
 
     //Whichever options the user picks will go into an empty array which I called finalPassword.  This will throw every array that was pushed after the confirms into the finalPassword array.
-    //To fix the issue of having multiple arrays pushed into one, the .flat method was used to make the characters pushed to finalPassword one big array.
+    //To fix the issue of having multiple arrays pushed into one, the .flat method was used to make the characters pushed to finalPassword one big array.  I then renamed finalPassword to flatPassord to reflect the change.
 
     var flatPassword = finalPassword.flat()
 
-    //Created a for loop, with a Math.random method to pick a character at random from the full length of the users choice of password length  through the flattened finalPassword array, which I renamed to flatPassword. 
-    //The random method was then re-assigned to a variable which I name randomCharacter.
+    // Created a for loop, with a Math.random method to pick a character at random from the full length of the users choice of password length through the flatPassword array.  The random method was then re-assigned to a variable which I name randomCharacter.
 
     for (let index = 0; index < instructionsInput; index++) {
 
