@@ -19,3 +19,9 @@ This project uses javascript to create an app that randomly generates a password
 7. Lines 57-74: If user inputs a number between 8-128, the following confirms pop up to ask what types of characters they would like to include in the password.
 
 8. Line 79: Whichever options the user picks will go into an empty array which I called finalPassword.  This will throw every array that was pushed after the confirms into the finalPassword array.  To fix the issue of having multiple arrays pushed into one, the .flat method was used to make the characters pushed to finalPassword one big array.
+
+9. Lines 84-87: Created a for loop, with a Math.random method to pick a character at random from the full length of the users choice of password length through the flattened finalPassword array - which I renamed to flatPassword.  The random method was then re-assigned to a variable which I name randomCharacter.
+
+10. Line 91: The random characters are then pushed to the empty array generatedPassword, which contains the final result.
+
+11. Line 98: Returns the generated password to the screen.  Had to use .join method to get rid of commas resulting from the array, which results in a cleanly generated password with the correct amount of characters.

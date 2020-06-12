@@ -86,14 +86,14 @@ function generatePassword() {
       var randomCharacter = flatPassword[Math.floor(Math.random() * flatPassword.length)];
       console.log(randomCharacter)
 
-      //The random characters are then pushed to the empty array generated Password, whcih containes the final result.
+      //The random characters are then pushed to the empty array generatedPassword, which contains the final result.
 
       generatedPassword.push(randomCharacter);
 
     }
   }
 
-  //Returns te generated password to the screen.  Had to use .join method to get rid of commas resulting from the array, which results in a cleanly generated password with the correct amount of characters.
+  //Returns the generated password to the screen.  Had to use .join method to get rid of commas resulting from the array, which results in a cleanly generated password with the correct amount of characters.
 
   return generatedPassword.join("");
 }
