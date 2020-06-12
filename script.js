@@ -29,7 +29,7 @@ function writePassword() {
 
 generateBtn.addEventListener("click", writePassword);
 
-// Function created to begin collecting all the info needed, and putting the password together
+// Function created to begin collecting all the info needed, and putting the password together.
 
 function generatePassword() {
 
