@@ -73,8 +73,8 @@ function generatePassword() {
       finalPassword.push(specialCharacters)
     }
 
-    //Whichever options the user picks, will go into an empty array which I called finalPassword.  This will throw every array that was pushed after the confirms into the finalPassword array.
-    //To fix the issue of having multiple arrays to pick one, the .flat method to make the characters pushed to finalPassword one big array.
+    //Whichever options the user picks will go into an empty array which I called finalPassword.  This will throw every array that was pushed after the confirms into the finalPassword array.
+    //To fix the issue of having multiple arrays pushed into one, the .flat method was used to make the characters pushed to finalPassword one big array.
 
     var flatPassword = finalPassword.flat()
 
