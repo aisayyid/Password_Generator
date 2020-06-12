@@ -53,7 +53,7 @@ function generatePassword() {
   }
 
   //If user inputs a number between 8-128, the following confirms pop up to ask what types of characters they would like to include in the password.
- 
+
   else {
     var lowerCaseYes = confirm("Would you like to include lower case letters?")
     if (lowerCaseYes === true) {
@@ -77,15 +77,24 @@ function generatePassword() {
     //To fix the issue of having multiple arrays to pick one, the .flat method to make the characters pushed to finalPassword one big array.
 
     var flatPassword = finalPassword.flat()
+
+    //Created a for loop, with a Math.random method to pick a character at random from the full length of the users choice of password length  through the flattened finalPassword array, which I renamed to flatPassword. 
+    //The random method was then re-assigned to a variable which I name randomCharacter.
+
     for (let index = 0; index < instructionsInput; index++) {
 
       var randomCharacter = flatPassword[Math.floor(Math.random() * flatPassword.length)];
       console.log(randomCharacter)
 
+      //The random characters are then pushed to the empty array generated Password, whcih containes the final result.
+
       generatedPassword.push(randomCharacter);
 
     }
   }
+
+  //Returns te generated password to the screen.  Had to use .join method to get rid of commas resulting from the array, which results in a cleanly generated password with the correct amount of characters.
+
   return generatedPassword.join("");
 }
 
