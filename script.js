@@ -52,7 +52,8 @@ function generatePassword() {
     alert("Character is not a number.")
   }
 
-  //
+  //If user inputs a number between 8-128, the following confirms pop up to ask what types of characters they would like to include in the password.
+ 
   else {
     var lowerCaseYes = confirm("Would you like to include lower case letters?")
     if (lowerCaseYes === true) {
@@ -71,6 +72,9 @@ function generatePassword() {
     if (symbolsYes === true) {
       finalPassword.push(specialCharacters)
     }
+
+    //Whichever options the user picks, will go into an empty array which I called finalPassword.  This will throw every array that was pushed after the confirms into the finalPassword array.
+    //To fix the issue of having multiple arrays to pick one, the .flat method to make the characters pushed to finalPassword one big array.
 
     var flatPassword = finalPassword.flat()
     for (let index = 0; index < instructionsInput; index++) {
