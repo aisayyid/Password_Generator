@@ -26,4 +26,4 @@ This project uses javascript to create an app that randomly generates a password
 
 -  Line 98:  Returns the generated password to the screen.  Had to use .join method to get rid of commas resulting from the array, which results in a cleanly generated password with the correct amount of characters.
  
-  https://aisayyid.github.io/Password_Generator/
+   https://aisayyid.github.io/Password_Generator/
